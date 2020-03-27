@@ -259,7 +259,91 @@ languages:
       - name: ブログ
         url: "/blog"
         weight: 5
-       
+
+  kr:
+    languageName: 한글 Korean
+    title: Falco — 클라우드 네이티브 런타임 보안(Cloud-Native Runtime Security)
+    contentDir: content/kr
+    params:
+      heroText:
+        # Main hero title
+        title: 클라우드 네이티브 런타임 보안
+        # Hero subtitle (optional)
+        subtitle: Falco, 오픈소스 클라우드 네이티브 런타임 보안 프로젝트는 쿠버네티스의 위협을 감지 표준 엔진입니다. the open source cloud-native runtime security project, is the defacto Kubernetes threat detection engine. Falco detects unexpected application behavior and alerts on threats at runtime.
+        # Button text
+        buttontext: 시작하기
+        # Falco joins CNCF
+        falcoCNCF: Falco는 CNCF Incubating Stage에 선정된 첫 런타임 보안 프로젝트입니다.
+      runtime:
+        title: 왜 런타임 보안인가?
+        intro: >-
+          Securing Kubernetes requires putting controls in place to detect unexpected behavior that could be malicious. Examples include:
+        items:
+          - example: Exploits of unpatched and new vulnerabilities
+          - example: Insecure configurations
+          - example: Leaked or weak credentials
+          - example: Insider threats
+        closing: Even when processes are in place for vulnerability scanning and implementing pod security and network policies, not every risk will be addressed. You still need mechanisms to confirm these security barriers are effective, help configure them, and provide with a last line of defense when they fail.
+      whyfalco:
+        title: Why Falco for Runtime Detection?
+        subtitle:
+        tiles:
+          - title: Strengthen security
+            icon: check.png
+            text: Create security rules driven by a context-rich and flexible engine to define unexpected application behavior.
+          - title: Reduce risk
+            icon: box.png
+            text: Immediately respond to policy violation alerts by plugging Falco into your current security response workflows and processes.
+          - title: Leverage up-to-date rules
+            icon: scalable.png
+            text: Alert using community-sourced detections of malicious activity and CVE exploits.
+      syscalls:
+        title: System calls deliver deep visibility
+        summary: Falco efficiently leverages Extended Berkeley Packet Filter (eBPF), a secure mechanism, to capture system calls and gain deep visibility. By adding Kubernetes application context and Kubernetes API audit events, teams can understand who did what.
+      resources:
+        title: Downloads + Resources
+        subtitle: Get started today, contribute to the open source project & learn more.
+        items:
+          - title: Contribute
+            text: Jump over to our GitHub page to contribute to our open source ecosystem.
+            # Icon (from /images/illustrations/icons/___.svg)
+            icon: group.png
+            buttonText:  Falco Github
+            buttonLink: https://github.com/falcosecurity/falco
+          - title: Download
+            text: Get started with our Falco installation guide.
+            icon: download.png
+            buttonText: Falco Install Guide
+            buttonLink: /docs/installation
+          - title: Documentation
+            text: In the official docs, you can find information about [installing Falco](/docs/installation), [configuration options](/docs/configuration), and writing [custom rules](/docs/rules).
+            icon: documentation-2.png
+            buttonText: Falco Documentation
+            buttonLink: /docs
+          - title: Connect
+            text: Join our Slack team to interact with other users and developers.
+            icon: chat.png
+            buttonText: Falco 슬랙
+            buttonLink: https://slack.sysdig.com/
+      signup:
+        title: Join the mailing list
+        subtitle: Get involved with the community
+        buttonText: 제출하기
+    menu:
+      navbar:
+        - name: Why Falco?
+          url: "/#whyfalco"
+          weight: 2
+        - name: Get started
+          url: "/#resources"
+          weight: 3
+        - name: Documentation
+          url: "/docs"
+          weight: 4
+        - name: 블로그
+          url: "/blog"
+          weight: 5
+
 params:
   version: v0.20.0
   githubRepository : falcosecurity/falco
